@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>GoEuro : GITHub Users</title>
+  <!-- Styles of application.  -->
+  <link rel="stylesheet" href="app/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="app/styles/style.css">
+</head>
+<!-- Bootstrap Angular App with ngapp -->
+<body ng-app="goEuroTest">
+  <div class="container">
+    <!-- ng-view to load view based on selected route of the application  -->
+    <ng-view></ng-view>
+  </div>
+<!-- vendor files  -->
+<script src="vendor/angular.min.js"></script>
+<script src="vendor/angular-route.min.js"></script>
+
+<!-- constant configuration files of the project  -->
+<script src="appProperties.js" type="text/javascript" charset="utf-8"></script>
+<!--  application files-->
+<script src="app/app.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/core/goEuroAPIServices.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/ui/repositoryListController.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

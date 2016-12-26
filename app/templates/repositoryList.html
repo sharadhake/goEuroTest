@@ -1,0 +1,35 @@
+<!--
+Created By : Sharad
+Description: Template to show repository lists.
+-->
+<div class="info">
+    <img src="app/git_logo.png" class="logo" align="left"/><span></span>
+</div>
+<div class="form-inline">
+    <div class="form-group">
+        <input type="text" ng-model="username" class="form-control" placeholder="Enter username...">
+    </div>
+    <button type="button" class="btn btn-success" ng-click="getUserRepositories();">Get Repository List</button>
+</div>
+<br/>
+<p class="bg-danger" ng-show="showErrMsg">{{errormessage}}</p>
+<div class="table-responsive" ng-show = "isVisible">
+      <h4>Repositories for {{username}}</h4>
+
+      <table class="table table-hover rwd-table">
+          <thead class="thead-inverse">
+              <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>GIT URL</th>
+              </tr>
+          </thead>
+          <tbody ng-repeat="repository in repositories">
+              <tr ng-click="navigateToRepository(repository)">
+                  <td>{{ repository.name}}</td>
+                  <td>{{ repository.description}}</td>
+                  <td>{{ repository.git_url}}</td>
+              </tr>
+          </tbody>
+      </table>
+</div>
